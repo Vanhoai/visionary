@@ -12,6 +12,30 @@
   font-size: 36px;
 }
 
+.about__title strong {
+  background: linear-gradient(
+    to right,
+    #7953cd 20%,
+    #fe9d44 30%,
+    #0190cd 70%,
+    #764ada 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: LabelGradient 5s ease-in-out infinite alternate;
+}
+
+@keyframes LabelGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .about__right {
   flex: 1;
   position: relative;
@@ -37,12 +61,12 @@
 
 @keyframes TransformUpDownRepeat {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
   100% {
-    transform: translateY(50px);
+    transform: translateY(20px);
   }
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-20px);
   }
 }

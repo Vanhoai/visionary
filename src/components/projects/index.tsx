@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./styles.css";
+import { AppStoreIcon, CHPlayIcon, FlutterIcon, KotlinIcon } from "../../icons";
 
 const projects = [
   {
@@ -51,8 +52,36 @@ export const ProjectItem: React.FC<ProjectItemProps> = (props) => {
         alt={props.name}
       />
 
-      <div className="projects__container__item__image__overlay">
-        <p>{props.name}</p>
+      <div className="projects__container__item__information">
+        <p className="projects__container__item__information__name">FSLBlog</p>
+        <p className="projects__container__item__information__description">
+          A Social Media BLog for personal. Where you can share your thoughts
+        </p>
+        <ul className="projects__container__item__information__tech">
+          <li className="projects__container__item__information__tech__item">
+            <FlutterIcon height={20} width={20} />
+            <span className="projects__container__item__information__tech__item__name">
+              Flutter
+            </span>
+          </li>
+
+          <li className="projects__container__item__information__tech__item">
+            <KotlinIcon height={20} width={20} />
+            <span className="projects__container__item__information__tech__item__name">
+              Kotlin
+            </span>
+          </li>
+        </ul>
+
+        <div className="projects__container__item__information__link">
+          <a href="#">
+            <CHPlayIcon height={30} width={30} />
+          </a>
+
+          <a href="#">
+            <AppStoreIcon height={30} width={30} />
+          </a>
+        </div>
       </div>
     </div>
   );

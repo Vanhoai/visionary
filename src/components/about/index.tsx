@@ -6,13 +6,7 @@ import "./styles.css";
 export const About: React.FC = () => {
   return (
     <section className="about" id="about">
-      <motion.p
-        className="about__title"
-        whileInView={{
-          opacity: [0.7, 1],
-          y: [100, 0],
-        }}
-      >
+      <motion.p className="about__title">
         I am a <strong>Mobile Engineer</strong> <br /> with a passion for AI and
         Machine Learning. Experience working with mobile apps that integrate
         AI/ML technology and Blockchain

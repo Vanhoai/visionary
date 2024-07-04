@@ -4,6 +4,7 @@ import {
   BackgroundCanvas,
   Container,
   Experience,
+  Footer,
   NavBar,
   Projects,
   Skills,
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       <Skills />
       <Projects />
       <Experience />
+      <Footer />
     </div>
   );
 };
