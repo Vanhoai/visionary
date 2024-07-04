@@ -7,6 +7,10 @@ import {
   FlutterIcon,
   PostgresIcon,
   DockerIcon,
+  ReduxIcon,
+  FigmaIcon,
+  DartIcon,
+  ReactNativeIcon,
 } from "../../icons";
 
 export const skills = [
@@ -41,6 +45,22 @@ export const skills = [
   {
     icon: DockerIcon,
     name: "Docker",
+  },
+  {
+    icon: ReduxIcon,
+    name: "Redux",
+  },
+  {
+    icon: FigmaIcon,
+    name: "Figma",
+  },
+  {
+    icon: DartIcon,
+    name: "Dart",
+  },
+  {
+    icon: ReactNativeIcon,
+    name: "React Native",
   },
 ];
 

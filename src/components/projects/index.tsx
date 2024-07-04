@@ -1,6 +1,12 @@
 import * as React from "react";
 import "./styles.css";
-import { AppStoreIcon, CHPlayIcon, FlutterIcon, KotlinIcon } from "../../icons";
+import {
+  AppStoreIcon,
+  CHPlayIcon,
+  FlutterIcon,
+  GithubIcon,
+  KotlinIcon,
+} from "../../icons";
 
 const projects = [
   {
@@ -74,6 +80,10 @@ export const ProjectItem: React.FC<ProjectItemProps> = (props) => {
         </ul>
 
         <div className="projects__container__item__information__link">
+          <a href="#">
+            <GithubIcon height={26} width={26} />
+          </a>
+
           <a href="#">
             <CHPlayIcon height={30} width={30} />
           </a>
