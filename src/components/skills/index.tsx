@@ -1,51 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import "./styles.css";
-import {
-  KotlinIcon,
-  SwiftIcon,
-  FirebaseIcon,
-  NestJsIcon,
-  MongodbIcon,
-  FlutterIcon,
-  PostgresIcon,
-  DockerIcon,
-} from "../../icons";
-
-const skills = [
-  {
-    icon: KotlinIcon,
-    name: "Kotlin",
-  },
-  {
-    icon: SwiftIcon,
-    name: "Swift",
-  },
-  {
-    icon: FirebaseIcon,
-    name: "Firebase",
-  },
-  {
-    icon: NestJsIcon,
-    name: "NestJs",
-  },
-  {
-    icon: MongodbIcon,
-    name: "MongoDB",
-  },
-  {
-    icon: FlutterIcon,
-    name: "Flutter",
-  },
-  {
-    icon: PostgresIcon,
-    name: "Postgres",
-  },
-  {
-    icon: DockerIcon,
-    name: "Docker",
-  },
-];
+import { skills, core } from "./contants";
 
 export const Skills: React.FC = () => {
   return (
@@ -60,133 +16,38 @@ export const Skills: React.FC = () => {
           </div>
         </div>
         <ul className="skills__container__core">
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              💎 Core
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ OOP, SOLID, Design Pattern
-            </motion.p>
-          </li>
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              ⏰ Manage
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ Good teamwork and time management
-            </motion.p>
-          </li>
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              🛠️ Architecture
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ MVVM Architecture <br />
-              ✔️ Clean Architecture <br />
-              ✔️ Driven Domain Design
-            </motion.p>
-          </li>
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              🎨 Design
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ Figma
-            </motion.p>
-          </li>
+          {core.map((skill) => {
+            return (
+              <li key={skill.title} className="skills__container__core__item">
+                <motion.p
+                  whileHover={{
+                    scaleY: 1.15,
+                    scaleX: 1.15,
+                  }}
+                  className="skills__container__core__item__name"
+                >
+                  {skill.title}
+                </motion.p>
 
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              📚 AI
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ Algorithms Machine Learning <br />
-              ✔️ LLM / Generative AI
-            </motion.p>
-          </li>
-
-          <li className="skills__container__core__item">
-            <motion.p
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-              className="skills__container__core__item__name"
-            >
-              📚 Blockchain
-            </motion.p>
-            <motion.p
-              className="skills__container__core__item__description"
-              whileHover={{
-                scaleY: 1.15,
-                scaleX: 1.15,
-              }}
-            >
-              ✔️ Solidity Language <br />
-              ✔️ Write Smart Contract <br />
-              ✔️ Web3JS, WalletConnect
-            </motion.p>
-          </li>
+                <div className="skills__container__core__item__list">
+                  {skill.skills.map((e) => {
+                    return (
+                      <motion.p
+                        key={e}
+                        className="skills__container__core__item__description"
+                        whileHover={{
+                          scaleY: 1.15,
+                          scaleX: 1.15,
+                        }}
+                      >
+                        ✔️ {e}
+                      </motion.p>
+                    );
+                  })}
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>

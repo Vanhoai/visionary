@@ -76,5 +76,11 @@
 .skills__container__core__item__description {
   font-size: 18px;
   line-height: 32px;
+}
+
+.skills__container__core__item__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   flex: 7;
 }

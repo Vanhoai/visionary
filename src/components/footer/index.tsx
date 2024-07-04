@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
 
             <div className="footer__contact__socials__divider" />
 
-            <a href="https://www.linkedin.com/in/tran-van-hoai/">
+            <a href="https://www.linkedin.com/in/tran-hoai-38a028235">
               <LinkedinIcon />
             </a>
           </div>

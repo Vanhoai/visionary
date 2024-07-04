@@ -30,13 +30,13 @@ export const NavBar: React.FC = () => {
         </ul>
 
         <div className="navbar__socials">
-          <span>
+          <a href="https://github.com/Vanhoai">
             <GithubIcon />
-          </span>
+          </a>
           <div className="navbar__socials__separator" />
-          <span>
+          <a href="https://www.linkedin.com/in/tran-hoai-38a028235">
             <LinkedinIcon />
-          </span>
+          </a>
         </div>
       </nav>
     </header>

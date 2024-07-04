@@ -54,7 +54,7 @@
   border-radius: 4px;
   transition: all 0.3s linear;
   margin-right: 12px;
-  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .container__actions__hire:hover {
@@ -74,6 +74,10 @@
   margin-right: 12px;
 }
 
+.container__actions_download__icon {
+  animation: UpDown 1s ease-in-out infinite alternate;
+}
+
 .container__actions_download:hover {
   opacity: 0.6;
   cursor: pointer;
@@ -85,5 +89,17 @@
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes UpDown {
+  0% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+  0% {
+    transform: translateY(-4px);
   }
 }
