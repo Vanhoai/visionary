@@ -8,7 +8,7 @@ export const Container: React.FC = () => {
       <img
         className="container__image"
         alt="avatar"
-        src="https://images.pexels.com/photos/26646539/pexels-photo-26646539/free-photo-of-couple-in-love.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        src="https://i.pinimg.com/736x/35/15/ed/3515ed5f1a66e182a0f6779aeb73e3ae.jpg"
       />
 
       <h5 className="container__name">Hi ! I’m Trần Văn Hoài ✌🏻</h5>

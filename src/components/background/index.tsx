@@ -75,7 +75,7 @@ export const BackgroundCanvas = () => {
           density: {
             enable: true,
           },
-          value: 120,
+          value: 100,
         },
         opacity: {
           value: 0.5,
