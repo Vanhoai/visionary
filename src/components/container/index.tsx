@@ -13,7 +13,7 @@ export const Container: React.FC = () => {
       />
 
       <h5 className="container__name">Hi! I’m Trần Văn Hoài ✌🏻</h5>
-      <p className="container__special">Mobile Engineer / AI/ML Engineer</p>
+      <p className="container__special">Mobile Engineer</p>
 
       <div className="container__actions">
         <button className="container__actions__hire">

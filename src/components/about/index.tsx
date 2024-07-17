@@ -8,8 +8,8 @@ export const About: React.FC = () => {
     <section className="about" id="about">
       <motion.p className="about__title">
         I am a <strong>Mobile Engineer</strong> <br /> with a passion for AI and
-        Machine Learning. Experience working with mobile apps that integrate
-        AI/ML technology and Blockchain
+        Machine Learning. Always interested in learning about technology,
+        especially AI and Blockchain
       </motion.p>
       <div className="about__right">
         <div className="about__card__bubble"></div>
