@@ -22,7 +22,7 @@
 }
 
 .projects__container__item {
-  height: 240px;
+  height: 260px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   background-color: white;
@@ -58,6 +58,7 @@
 .projects__container__item__information__description {
   font-size: 14px;
   color: rgb(146, 146, 146);
+  margin: 12px 0;
 }
 
 .projects__container__item__information__tech {
