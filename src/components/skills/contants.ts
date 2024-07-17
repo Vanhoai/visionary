@@ -93,8 +93,8 @@ export const core = [
       "Web3JS, WalletConnect",
     ],
   },
-  {
-    title: "📘 AI",
-    skills: ["Algorithms Machine Learning", "LLM / Generative AI"],
-  },
+  // {
+  //   title: "📘 AI",
+  //   skills: ["Algorithms Machine Learning", "LLM / Generative AI"],
+  // },
 ];
