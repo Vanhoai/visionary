@@ -26,7 +26,7 @@ export const Experience: React.FC = () => {
                 Appsindie (Start up company)
               </p>
               <p className="experience__container__content__card__content__date">
-                Mobile Developer (02/2024 - 07/2024)
+                Mobile Developer (01/2024 - 07/2024)
               </p>
               <p className="experience__container__content__card__content__tech">
                 Technologies: Azure Function, Mongodb, React Native, Redux
@@ -73,7 +73,7 @@ export const Experience: React.FC = () => {
                 Tiên Phong CDS
               </p>
               <p className="experience__container__content__card__content__date">
-                Mobile Developer (08/2023 - 01/2024)
+                Mobile Developer (05/2023 - 12/2023)
               </p>
               <p className="experience__container__content__card__content__tech">
                 Technologies: Flutter, GetIt, Mapbox, Bloc, Clean Archiecture,
@@ -96,49 +96,6 @@ export const Experience: React.FC = () => {
             </div>
           </div>
           {/* END CDS */}
-
-          {/* START Blackwind */}
-          <div className="experience__container__content__card">
-            {/* LINE AND DOT*/}
-            <div className="experience__container__content__card__line">
-              <div className="experience__container__content__card__line__center">
-                <div className="experience__container__content__card__line__dot"></div>
-              </div>
-            </div>
-
-            {/* CARD */}
-            <div className="experience__container__content__card__content">
-              <p className="experience__container__content__card__content__title">
-                Blackwind Software
-              </p>
-              <p className="experience__container__content__card__content__date">
-                Mobile Developer (05/2023 - 07/2023)
-              </p>
-              <p className="experience__container__content__card__content__tech">
-                Technologies: React Native, ML Kit, Camera, Map Location, Redux
-                Saga, NodeJS, Microsoft SQL Server
-              </p>
-              <ul className="experience__container__content__card__content__description">
-                <li>
-                  ✔️ Implementing ERP projects for some businesses such as
-                  Hoanghamobile, Hesman Shopdunk
-                </li>
-                <li>
-                  ✔️ Collaborate with design and BA teams to review feature
-                  implementations and analyze work
-                </li>
-                <li>
-                  ✔️ Deploy base construction for the project on the Frontend
-                  side using React Native technology, Redux Toolkit
-                </li>
-                <li>
-                  ✔️ Focus on handling Camera checkin, location tracking using
-                  MLKit and Map Location
-                </li>
-              </ul>
-            </div>
-          </div>
-          {/* END Blackwind */}
         </div>
       </div>
     </section>

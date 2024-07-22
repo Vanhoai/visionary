@@ -3,12 +3,12 @@ import "./styles.css";
 
 const projects = [
   {
-    name: "FSLBlog",
+    name: "Tourismate",
     image:
       "https://i.pinimg.com/564x/d4/5f/7c/d45f7c4992728360bda6e180bf6a859f.jpg",
     description:
-      "A social project that allows users to share posts and share ideas, follow each other and like posts.",
-    tech: "Tech: Flutter, Bloc, SocketIO, Firebase, Postgres, NestJS",
+      "Tourismate is a travel support application using AI technology. Here we will provide trip itinerary using large language model (LLM). There will also be real-time location tracking of the team on Maps.",
+    tech: "Tech: Kotlin for Android, Swift for IOS, ...updating",
   },
   {
     name: "WFlow",
@@ -27,12 +27,11 @@ const projects = [
     tech: "Tech: React Native, Redux Toolkit, Blockchain, Firebase",
   },
   {
-    name: "Tourismate",
+    name: "Aurora Coffee",
     image:
       "https://i.pinimg.com/564x/d4/5f/7c/d45f7c4992728360bda6e180bf6a859f.jpg",
-    description:
-      "Tourismate is a travel support application using AI technology. Here we will provide trip itinerary using large language model (LLM). There will also be real-time location tracking of the team on Maps.",
-    tech: "Tech: Kotlin for Android, Swift for IOS, ...updating",
+    description: "Project on selling coffee and managing a chain of stores",
+    tech: "Tech: Android, MVVM, Retrofit, Firebase, NestJS, Postgres",
   },
 ];
 
