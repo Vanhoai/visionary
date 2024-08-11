@@ -70,27 +70,26 @@ export const Experience: React.FC = () => {
             {/* CARD */}
             <div className="experience__container__content__card__content">
               <p className="experience__container__content__card__content__title">
-                Tiên Phong CDS
+                Blackwind Software
               </p>
               <p className="experience__container__content__card__content__date">
                 Mobile Developer (05/2023 - 12/2023)
               </p>
               <p className="experience__container__content__card__content__tech">
-                Technologies: Flutter, GetIt, Mapbox, Bloc, Clean Archiecture,
-                DI
+                Technologies: React Native, Camera, Map Location, Redux Saga, NodeJS, Microsoft SQL Server
               </p>
               <ul className="experience__container__content__card__content__description">
                 <li>
-                  ✔️ Perform error testing for new and old company projects on
-                  the Mobile Frontend side
+                  ✔️ Implementing ERP projects for some businesses such as Hoanghamobile, Hesman Shopdunk
                 </li>
                 <li>
-                  ✔️ Coordinate with BA and Backend teams to develop outsourcing
-                  projects for customers
+                  ✔️ Collaborate with design and BA teams to review feature implementations and analyze work
                 </li>
                 <li>
-                  ✔️ Meeting to discuss ongoing project progress and report to
-                  customers
+                  ✔️ Deploy base construction for the project on the Frontend side using React Native technology, Redux Toolkit
+                </li>
+                <li>
+                  ✔️ Focus on handling Camera checkin, location tracking using MLKit and Map Location
                 </li>
               </ul>
             </div>
