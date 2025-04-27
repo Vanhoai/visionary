@@ -1,6 +1,6 @@
 import React from "react"
 
-const Button: React.FC = () => {
+export const Button: React.FC = () => {
     return (
         <button
             className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
@@ -12,5 +12,3 @@ const Button: React.FC = () => {
         </button>
     )
 }
-
-export default Button
