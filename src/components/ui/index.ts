@@ -1,2 +1,2 @@
-export * from "./icons"
+export * from "./assets"
 export * from "./button"

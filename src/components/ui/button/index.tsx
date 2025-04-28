@@ -1,14 +1,20 @@
 import React from "react"
 
-export const Button: React.FC = () => {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    children: React.ReactNode
+}
+
+export const Button: React.FC<ButtonProps> = ({ children, className, ...props }) => {
     return (
         <button
-            className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
-    border-blue-600
-    border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
-    active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
+            className={`
+            cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
+            border-blue-600
+            border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+            active:border-b-[2px] active:brightness-90 active:translate-y-[2px] ${className}`}
+            {...props}
         >
-            Button
+            {children}
         </button>
     )
 }
