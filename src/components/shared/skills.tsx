@@ -1,4 +1,6 @@
-import { HeartRed, KerasPng, MLOpsPng, OpencvSvg, StarBlue, StarYellow, TensorflowSvg } from "@/components"
+"use client"
+
+import { HeartRed, KerasPng, MLOpsPng, OpencvSvg, StarBlue, StarYellow, TensorflowSvg } from "@/assets"
 import Image from "next/image"
 import React from "react"
 
@@ -37,7 +39,7 @@ const dataScienceSkills = [
 
 export const Skills: React.FC = () => {
     return (
-        <div className="container mx-auto mt-40">
+        <div className="container px-20 mx-auto mt-40">
             <div className="flex flex-row">
                 <div className="flex-1 flex flex-row justify-start">
                     <h2 className="text-2xl">{"Skills and Technologies I've Been Applying"}</h2>
@@ -78,39 +80,6 @@ export const Skills: React.FC = () => {
                                     alt="TypeScript"
                                     width={32}
                                     height={32}
-                                />
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col mt-5">
-                            <h2 className="mb-2">Tools</h2>
-                            <div className="flex flex-row flex-1 items-center gap-3 justify-start">
-                                <Image
-                                    src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/jupyter_notebook.png"
-                                    alt="Jupyter Notebook"
-                                    width={32}
-                                    height={32}
-                                />
-
-                                <Image
-                                    src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/git.png"
-                                    alt="Git"
-                                    width={32}
-                                    height={32}
-                                />
-
-                                <Image
-                                    src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/pycharm.png"
-                                    alt="PyCharm"
-                                    width={32}
-                                    height={32}
-                                />
-
-                                <Image
-                                    src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/android_studio.png"
-                                    alt="Android Studio"
-                                    width={30}
-                                    height={30}
                                 />
                             </div>
                         </div>

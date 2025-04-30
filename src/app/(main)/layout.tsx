@@ -9,11 +9,11 @@ interface RootLayoutProps {
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     return (
-        <React.Fragment>
+        <div className="w-full bg-[#FEFFF0]">
             <Header />
             {children}
             <Footer />
-        </React.Fragment>
+        </div>
     )
 }
 

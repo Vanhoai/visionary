@@ -1,4 +1,4 @@
-import { ArrowSvg, GroundSvg, PencilSvg } from "@/components"
+import { ArrowSvg, GroundSvg, PencilSvg } from "@/assets"
 import Image from "next/image"
 import React from "react"
 
@@ -8,7 +8,7 @@ const playwrite = Playwrite_AU_SA({ weight: "400" })
 
 export const Todo: React.FC = () => {
     return (
-        <div className="container mx-auto w-full mt-14">
+        <div className="container px-20 mx-auto w-full mt-14">
             <div className="flex flex-col w-full justify-center items-center">
                 <span className="relative mb-4 w-52 h-10">
                     <Image

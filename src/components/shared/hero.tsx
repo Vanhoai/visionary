@@ -1,14 +1,14 @@
-import { Button, DeveloperPng, FrameSvg, HinsunSvg, IdeaSvg } from "@/components"
+import { DeveloperPng, FrameSvg, HinsunSvg, IdeaSvg } from "@/assets"
+import { Button } from "@/components"
 import Image from "next/image"
 import * as React from "react"
-
 import { Paytone_One } from "next/font/google"
 
 const paytone = Paytone_One({ weight: "400", subsets: ["latin"] })
 
 export const Hero: React.FC = () => {
     return (
-        <div className="container mx-auto w-full h-[80vh] flex flex-row justify-center items-center pt-[90px]">
+        <div className="container px-20 mx-auto w-full h-[80vh] flex flex-row justify-center items-center pt-[90px]">
             <div className="h-full flex-1 flex flex-col justify-center items-start">
                 <p className="text-xl mt-16">Hi 👋🏻, My name is Hoai</p>
                 <h1 className={`text-4xl font-semibold ${paytone.className} drop-shadow-xl`}>
@@ -21,9 +21,9 @@ export const Hero: React.FC = () => {
                     </p>
                     <span className="my-2" />
                     <p>
-                        With a deep passion for AI, Machine Learning, and software development, I bridge the gap between
-                        intelligent technologies and real-world impact, crafting solutions that are both efficient and
-                        user-centric.
+                        With a deep passion for Machine Learning/Deep Learning, and software development, I bridge the
+                        gap between intelligent technologies and real-world impact, crafting solutions that are both
+                        efficient and user-centric.
                     </p>
                 </div>
 

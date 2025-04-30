@@ -1,4 +1,4 @@
-import { ArrowTopRightSvg } from "@/components/ui"
+import { ArrowTopRightSvg } from "@/assets"
 import Image from "next/image"
 import React from "react"
 
@@ -27,7 +27,7 @@ const projects = [
 
 export const Projects: React.FC = () => {
     return (
-        <div className="container mx-auto mt-40">
+        <div className="container px-20 mx-auto mt-40">
             <div className="w-full flex flex-row justify-center gap-3 mb-10">
                 <h1 className="text-3xl font-bold">Featured</h1>
                 <div className="flex flex-col">
