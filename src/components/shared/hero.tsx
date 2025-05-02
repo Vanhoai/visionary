@@ -8,22 +8,22 @@ const paytone = Paytone_One({ weight: "400", subsets: ["latin"] })
 
 export const Hero: React.FC = () => {
     return (
-        <div className="container px-20 mx-auto w-full h-[80vh] flex flex-row justify-center items-center pt-[90px]">
+        <div className="container mx-auto w-full h-[80vh] flex flex-row justify-center items-center pt-[90px]">
             <div className="h-full flex-1 flex flex-col justify-center items-start">
-                <p className="text-xl mt-16">Hi 👋🏻, My name is Hoai</p>
+                <p className="text-lg mt-16">Hi 👋🏻, Tên mình là Hoài, nickname là Hinsun</p>
                 <h1 className={`text-4xl font-semibold ${paytone.className} drop-shadow-xl`}>
                     Machine Learning Engineer
                 </h1>
                 <div className="text-[16px] mt-5 flex flex-col">
                     <p>
-                        I am a writer ✍🏻 and machine learning engineer, specializing in building scalable machine
-                        learning solutions, innovative mobile applications, and modern software systems.
+                        Mình là một Machine Learning, chuyên xây dựng các giải pháp học máy và học sâu có khả năng mở
+                        rộng và dễ dàng quản lý.
                     </p>
                     <span className="my-2" />
                     <p>
-                        With a deep passion for Machine Learning/Deep Learning, and software development, I bridge the
-                        gap between intelligent technologies and real-world impact, crafting solutions that are both
-                        efficient and user-centric.
+                        Với niềm đam mê dành cho Machine Learning/Deep Learning và phát triển phần mềm, mình luôn nỗ lực
+                        kết nối giữa công nghệ thông minh và tác động thực tiễn – tạo ra những giải pháp hiệu quả và có
+                        thể phục vụ cho mọi người.
                     </p>
                 </div>
 

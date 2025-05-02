@@ -46,13 +46,11 @@ const blogs = [
 
 const Blogs = () => {
     return (
-        <div className="container mx-auto pt-[90px] px-20">
+        <div className="container mx-auto pt-[90px]">
             <div className="overflow-x-auto gap-3 flex whitespace-nowrap scrollbar-hide scroll-smooth mt-10 mb-5">
                 {topics.map((topic) => {
                     return (
                         <div key={topic} className="relative bg-white h-32 border-3 w-[360px]">
-                            {/* <div className="absolute top-1 left-1 w-full h-full bg-gray-700 z-0" /> */}
-
                             <div className="absolute top-0 left-0 right-0 bottom-0 z-1 p-4 flex flex-col justify-between">
                                 <div className="relative h-12">
                                     <h2 className={`text-lg text-wrap line-clamp-2 absolute top-0 left-0 z-1`}>

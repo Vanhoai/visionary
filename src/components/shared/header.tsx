@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
 
     return (
         <header className="w-full fixed top-0 left-0 right-0 z-50 bg-[#FEFFF0]">
-            <div className="container px-20 mx-auto flex flex-row items-center h-[90px]">
+            <div className="container mx-auto flex flex-row items-center h-[90px]">
                 <div className="flex flex-row gap-2 items-center cursor-pointer">
                     <h1 className="text-3xl font-bold">Hinsun</h1>
                     <Image src={StarSvg} alt="Star" className="w-[26px] h-[26px]" />

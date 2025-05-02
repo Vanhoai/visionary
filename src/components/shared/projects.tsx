@@ -4,34 +4,38 @@ import React from "react"
 
 const projects = [
     {
-        name: "Face Recognition",
-        description: "A web application that uses machine learning to recognize faces in images.",
+        name: "Nhận diện khuôn mặt với YOLOv5",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         image: "https://i.pinimg.com/736x/a5/31/cf/a531cf050a0f506ebca514366eff0dfb.jpg",
     },
     {
-        name: "Image Classification with Vision Transformer",
-        description: "A web application that uses machine learning to classify images.",
+        name: "Phân lớp bệnh trên cây với kiến trúc Vision Transformer",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         image: "https://i.pinimg.com/736x/34/3a/97/343a97852d1a561dff8be7e17c5dd629.jpg",
     },
     {
         name: "Object Detection with YOLOv5",
-        description: "A web application that uses machine learning to detect objects in images.",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         image: "https://i.pinimg.com/736x/a5/31/cf/a531cf050a0f506ebca514366eff0dfb.jpg",
     },
     {
         name: "Speech Recognition with Deep Learning",
-        description: "A web application that uses machine learning to recognize speech.",
+        description:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         image: "https://i.pinimg.com/736x/a5/31/cf/a531cf050a0f506ebca514366eff0dfb.jpg",
     },
 ]
 
 export const Projects: React.FC = () => {
     return (
-        <div className="container px-20 mx-auto mt-40">
+        <div className="container mx-auto mt-40">
             <div className="w-full flex flex-row justify-center gap-3 mb-10">
-                <h1 className="text-3xl font-bold">Featured</h1>
+                <h1 className="text-3xl font-bold">DỰ ÁN</h1>
                 <div className="flex flex-col">
-                    <h1 className="text-3xl font-bold">Projects</h1>
+                    <h1 className="text-3xl font-bold">NỔI BẬT</h1>
                     <span className="h-2 bg-yellow-400 w-full" />
                 </div>
             </div>
@@ -59,7 +63,7 @@ export const Projects: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="flex-1 text-sm line-clamp-3">{project.description}</p>
+                            <p className="flex-1 text-sm line-clamp-2">{project.description}</p>
                         </div>
                     )
                 })}

@@ -39,10 +39,10 @@ const dataScienceSkills = [
 
 export const Skills: React.FC = () => {
     return (
-        <div className="container px-20 mx-auto mt-40">
+        <div className="container mx-auto mt-40">
             <div className="flex flex-row">
                 <div className="flex-1 flex flex-row justify-start">
-                    <h2 className="text-2xl">{"Skills and Technologies I've Been Applying"}</h2>
+                    <h2 className="text-2xl">Kỹ năng và một số công nghệ mình sử dụng</h2>
                     <Image src={StarYellow} alt="Face" width={40} height={40} />
                 </div>
                 <div className="flex-1" />
@@ -52,7 +52,7 @@ export const Skills: React.FC = () => {
                 <div className="border-t-2 border-r-2">
                     <div className="py-4">
                         <div className="flex flex-col">
-                            <h2 className="mb-2">Languages</h2>
+                            <h2 className="mb-2">Ngôn ngữ lập trình</h2>
                             <div className="flex flex-row flex-1 items-center gap-3 justify-start">
                                 <Image
                                     src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/c++.png"
@@ -81,37 +81,46 @@ export const Skills: React.FC = () => {
                                     width={32}
                                     height={32}
                                 />
+
+                                <Image
+                                    src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/go.png"
+                                    alt="TypeScript"
+                                    width={36}
+                                    height={32}
+                                />
                             </div>
                         </div>
                     </div>
 
                     <div className="flex-1 border-t-2 py-4 flex flex-col gap-2">
-                        <h1 className="text-lg">Soft Skills</h1>
-                        <p>Can communicate in English.</p>
-                        <p>Strong problem-solving and critical thinking abilities.</p>
-                        <p>Able to manage time and prioritize tasks efficiently.</p>
+                        <h1 className="text-lg">Kỹ năng mềm</h1>
+                        <p>Giao tiếp tiếng anh</p>
+                        <p>Kỹ năng tư duy và chịu học hỏi</p>
+                        <p>Chịu áp lực tốt, quản lý tiến độ và công việc hiệu quả</p>
                     </div>
                 </div>
 
                 <div className="h-[600px] border-t-2 border-r-2 flex flex-col">
                     <div className="flex-1 p-4 flex flex-col">
                         <Image src={StarBlue} alt="Star" width={40} height={40} />
-
-                        <h1 className="font-medium text-lg mt-4">Data Science</h1>
+                        <h1 className="font-medium text-lg mt-4 mb-4">Học máy</h1>
                         <ul className="flex flex-col gap-2">
-                            <li>Building scalable machine learning systems.</li>
-                            <li>Deploying models into software products.</li>
-                            <li>Analyzing data and statistical modeling.</li>
+                            <li>
+                                Mình có thể xây dựng các mô hình học máy và học sâu, đặt biệt mình thích lĩnh vực thị
+                                giác máy tính với mong muốn có thể áp dụng chúng để giúp cuộc sống ngày một thông minh
+                                hơn.
+                            </li>
                         </ul>
                     </div>
                     <div className="flex-1 border-t-2 flex flex-col p-4">
                         <Image src={HeartRed} alt="Star" width={40} height={40} />
 
-                        <h1 className="font-medium text-lg mt-4">Software Development</h1>
+                        <h1 className="font-medium text-lg mt-4 mb-4">Phát triển phần mềm</h1>
                         <ul className="flex flex-col gap-2">
-                            <li>Integrating AI/ML into mobile apps.</li>
-                            <li>Building scalable backend architectures.</li>
-                            <li>Optimizing UI and app performance.</li>
+                            <li>
+                                Mình có thể xây dựng và triển khai các ứng dựng Mobile và cả phần Backend cho ứng dụng.
+                                Mình thích các chủ đề về Giáo dục và Cuộc sống.
+                            </li>
                         </ul>
                     </div>
                 </div>
