@@ -2,7 +2,9 @@
 const nextConfig = {
     output: "export",
     images: { unoptimized: true },
-    assetPrefix: "/visionary/",
+    ...(process.env.NODE_ENV === "production" && {
+        assetPrefix: "/visionary/",
+    }),
     distDir: "build",
 };
 

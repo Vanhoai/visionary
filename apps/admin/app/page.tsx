@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
-import { Button } from "@visionary/ui/button";
+import { Button } from "@visionary/ui/components/button";
 
 type Props = Omit<ImageProps, "src"> & {
     srcLight: string;
@@ -57,9 +57,7 @@ export default function Home() {
                         Read our docs
                     </a>
                 </div>
-                <Button appName="web" className={styles.secondary}>
-                    Open alert
-                </Button>
+                <Button className={styles.secondary}>Open alert</Button>
             </main>
             <footer className={styles.footer}>
                 <a
