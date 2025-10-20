@@ -1,0 +1,12 @@
+dist/
+build/
+webDist/
+distWeb/
+distLambda/
+goldstackLocal/
+coverage/
+node_modules/
+.next/
+.terraform/
+*.tfstate
+*.tfstate.backup
