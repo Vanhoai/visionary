@@ -1,5 +1,5 @@
 {
-    "name": "hinsunnn",
+    "name": "visionary",
     "private": true,
     "scripts": {
         "build": "turbo run build",
