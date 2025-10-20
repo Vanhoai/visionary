@@ -35,13 +35,23 @@ jobs:
             - name: Build Visionary Studio
               run: pnpm --filter visionary build
 
+            - name: Build Admin Dashboard
+              run: pnpm --filter admin build
+
+            - name: Create deployment directory
+              run: |
+                  mkdir -p deploy
+                  cp -r ./apps/visionary/build/* ./deploy/
+                  mkdir -p ./deploy/admin
+                  cp -r ./apps/admin/build/* ./deploy/admin/
+
             - name: Setup Pages
               uses: actions/configure-pages@v4
 
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./apps/visionary/out
+                  path: ./deploy
 
     deploy:
         environment:

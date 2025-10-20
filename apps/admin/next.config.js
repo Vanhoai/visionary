@@ -2,9 +2,9 @@
 const nextConfig = {
     output: "export",
     images: { unoptimized: true },
-    assetPrefix: "/visionary/",
     distDir: "build",
+    basePath: "/admin",
+    assetPrefix: "/admin/",
 };
 
 export default nextConfig;
-
