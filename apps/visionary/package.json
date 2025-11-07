@@ -11,18 +11,21 @@
         "check-types": "tsc --noEmit"
     },
     "dependencies": {
+        "@react-oauth/google": "^0.12.2",
         "@visionary/ui": "workspace:*",
+        "firebase": "^12.5.0",
         "next": "^15.5.0",
         "react": "^19.1.0",
         "react-dom": "^19.1.0"
     },
     "devDependencies": {
-        "@visionary/eslint-config": "workspace:*",
-        "@visionary/typescript-config": "workspace:*",
         "@types/node": "^22.15.3",
         "@types/react": "19.1.0",
         "@types/react-dom": "19.1.1",
+        "@visionary/eslint-config": "workspace:*",
+        "@visionary/typescript-config": "workspace:*",
         "eslint": "^9.34.0",
         "typescript": "5.9.2"
     }
 }
+

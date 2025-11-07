@@ -2,7 +2,7 @@ import Contact from "@/features/contact"
 import React from "react"
 
 const ContactRoute: React.FC = () => {
-  return <Contact />
+    return <Contact />
 }
 
 export default ContactRoute
