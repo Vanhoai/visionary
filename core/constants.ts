@@ -1,3 +1,5 @@
+import { getAssetPath } from "./utils"
+
 // Assets Constants
-export const OpenCvSvg = "/svgs/opencv.svg"
-export const DocumentSvg = "/svgs/document.svg"
+export const OpenCvSvg = getAssetPath("/svgs/opencv.svg")
+export const DocumentSvg = getAssetPath("/svgs/document.svg")
