@@ -3,8 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronDown, CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
-
 import { useIsMobile } from "@/hooks"
 import {
     Avatar,
