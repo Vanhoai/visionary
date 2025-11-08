@@ -8,7 +8,6 @@ import {
     Avatar,
     AvatarFallback,
     AvatarImage,
-    Button,
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuGroup,
@@ -29,6 +28,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui"
+import { StarGreySvg } from "@/core"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
             <div className="container mx-auto flex h-20 items-center justify-between">
                 <Link href="/" className="flex flex-row items-center gap-2 cursor-pointer">
                     <span className="font-medium text-[16px]">HINSUN</span>
-                    <Image src="/svgs/star_grey.svg" className="mb-0.5" width={20} height={20} alt="Star Grey" />
+                    <Image src={StarGreySvg} className="mb-0.5" width={20} height={20} alt="Star Grey" />
                 </Link>
 
                 <NavigationMenu viewport={isMobile}>
