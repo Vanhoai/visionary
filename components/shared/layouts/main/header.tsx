@@ -84,8 +84,8 @@ const Header: React.FC = () => {
     const isMobile = useIsMobile()
 
     return (
-        <header className="border-b bg-background">
-            <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <header className="border-b bg-background sticky top-0 z-40 w-full">
+            <div className="container mx-auto flex h-20 items-center justify-between">
                 <Link href="/" className="flex flex-row items-center gap-2 cursor-pointer">
                     <span className="font-medium text-[16px]">HINSUN</span>
                     <Image src="/svgs/star_grey.svg" className="mb-0.5" width={20} height={20} alt="Star Grey" />
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
                         </NavigationMenuItem>
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                <Link href="/contact">CONTACT</Link>
+                                <Link href="/about">ABOUT</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     </NavigationMenuList>
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
                 <div className="flex flex-row gap-2 items-center">
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Avatar className="w-10 h-10">
+                            <Avatar className="w-9 h-9">
                                 <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
@@ -182,8 +182,8 @@ const Header: React.FC = () => {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <div className="border w-10 h-10 rounded-4xl flex items-center justify-center hover:bg-secondary cursor-pointer">
-                        <span className="text-lg">EN</span>
+                    <div className="border w-9 h-9 rounded-4xl flex items-center justify-center hover:bg-secondary cursor-pointer">
+                        <span className="text-[16px] font-bold text-gray-500">EN</span>
                     </div>
                 </div>
             </div>
