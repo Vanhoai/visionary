@@ -113,11 +113,18 @@ const Header: React.FC = () => {
                                 <Link href="/blogs">BLOGS</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
+
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                                 <Link href="/about">ABOUT</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
+
+                        {/*<NavigationMenuItem>
+                            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                                <Link href="/editor">EDITOR</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>*/}
                     </NavigationMenuList>
                 </NavigationMenu>
 

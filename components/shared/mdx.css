@@ -1,0 +1,90 @@
+/* Custom MDX Editor Styles */
+.mdx-editor {
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Toolbar customization */
+.mdx-editor [role="toolbar"] {
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+}
+
+.mdx-editor [role="toolbar"] button {
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.mdx-editor [role="toolbar"] button:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-1px);
+}
+
+.mdx-editor [role="toolbar"] button[data-active="true"] {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Code block styling */
+.mdx-editor .cm-editor {
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    background-color: #1e293b;
+}
+
+.mdx-editor .cm-scroller {
+    font-family: "Fira Code", "Consolas", "Monaco", "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Content area */
+.mdx-editor .prose {
+    color: #1e293b;
+    line-height: 1.75;
+}
+
+.mdx-editor .prose h1,
+.mdx-editor .prose h2,
+.mdx-editor .prose h3,
+.mdx-editor .prose h4,
+.mdx-editor .prose h5,
+.mdx-editor .prose h6 {
+    font-weight: 700;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.mdx-editor .prose code {
+    background-color: #f1f5f9;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #e11d48;
+}
+
+.mdx-editor .prose pre {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.mdx-editor .prose blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1em;
+    color: #64748b;
+    font-style: italic;
+}
+
+.mdx-editor .prose table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.mdx-editor .prose table th,
+.mdx-editor .prose table td {
+    border: 1px solid #e2e8f0;
+    padding: 0.5em 1em;
+}

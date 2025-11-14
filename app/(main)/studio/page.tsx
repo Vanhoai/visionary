@@ -1,7 +1,8 @@
+import { Studio } from "@/features"
 import React from "react"
 
 const StudioPage: React.FC = () => {
-    return <div>StudioPage</div>
+    return <Studio />
 }
 
 export default StudioPage

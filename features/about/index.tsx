@@ -1,18 +1,6 @@
 import React from "react"
 import Image from "next/image"
 
-// <div className="flex justify-center lg:justify-end">
-//     <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden shadow-xl">
-//         <Image
-//             src="https://i.pinimg.com/736x/19/5c/15/195c15bc600ba3e50ff5ac3be08c3667.jpg"
-//             alt="Profile"
-//             fill
-//             className="object-cover"
-//             priority
-//         />
-//     </div>
-// </div>
-
 const About: React.FC = () => {
     return (
         <div className="container mx-auto py-16">
