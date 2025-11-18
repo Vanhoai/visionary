@@ -1,6 +1,6 @@
 "use client"
 
-import { Editor } from "@/features"
+import { Editor } from "@/presentation/features"
 import React from "react"
 
 const EditorPage: React.FC = () => {

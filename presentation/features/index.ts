@@ -1,0 +1,5 @@
+export { default as Home } from "./home"
+export { default as About } from "./about"
+export { default as TechnicalWriting } from "./technical-writing"
+export { default as Editor } from "./edtior"
+export { default as Studio } from "./studio"

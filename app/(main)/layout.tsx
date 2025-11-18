@@ -1,3 +1,2 @@
-import { MainLayout } from "@/components/shared"
-
+import { MainLayout } from "@/presentation/components/shared"
 export default MainLayout

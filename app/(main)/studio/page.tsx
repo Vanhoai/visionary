@@ -1,4 +1,4 @@
-import { Studio } from "@/features"
+import { Studio } from "@/presentation/features"
 import React from "react"
 
 const StudioPage: React.FC = () => {

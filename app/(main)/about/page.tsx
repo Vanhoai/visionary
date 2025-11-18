@@ -1,4 +1,4 @@
-import { About } from "@/features"
+import { About } from "@/presentation/features"
 import React from "react"
 
 const AboutPage: React.FC = () => {

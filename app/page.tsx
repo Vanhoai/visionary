@@ -1,5 +1,5 @@
-import { MainLayout } from "@/components/shared"
-import { Home } from "@/features"
+import { MainLayout } from "@/presentation/components/shared"
+import { Home } from "@/presentation/features"
 import React from "react"
 
 const HomePage: React.FC = () => {
