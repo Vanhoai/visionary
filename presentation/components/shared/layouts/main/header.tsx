@@ -29,6 +29,13 @@ import {
     navigationMenuTriggerStyle,
 } from "@/presentation/components/ui"
 import { StarGreySvg } from "@/core"
+import {
+    useAccountStore,
+    useAuthStore,
+    useLoadingStore,
+} from "@/presentation/store"
+import { authService } from "@/presentation/di"
+import { useRouter } from "next/navigation"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -92,8 +99,21 @@ function ListItem({
 
 const Header: React.FC = () => {
     const isMobile = useIsMobile()
+    const router = useRouter()
+    const { setIsGlobalLoading } = useLoadingStore()
+    const { setAccessToken, setRefreshToken } = useAuthStore()
+    const { setAccount } = useAccountStore()
 
-    const signOut = async () => {}
+    const signOut = async () => {
+        setIsGlobalLoading(true, "Signing Out")
+        await authService.signOut()
+        setIsGlobalLoading(false, null)
+
+        setAccessToken(null)
+        setRefreshToken(null)
+        setAccount(null)
+        router.replace("/auth")
+    }
 
     return (
         <header className="border-b bg-background sticky top-0 z-40 w-full">
@@ -235,7 +255,7 @@ const Header: React.FC = () => {
                             <DropdownMenuItem>Support</DropdownMenuItem>
                             <DropdownMenuItem disabled>API</DropdownMenuItem>
                             <DropdownMenuSeparator />
-                            <DropdownMenuItem>
+                            <DropdownMenuItem onClick={signOut}>
                                 Log out
                                 <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                             </DropdownMenuItem>
