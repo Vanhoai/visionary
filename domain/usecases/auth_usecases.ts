@@ -1,6 +1,5 @@
 import { DomainResult } from "@/core"
 
-// region ==================================== AuthSessionUseCase ====================================
 export interface AuthParams {
     email: string
     password: string
@@ -29,4 +28,3 @@ export interface AuthSessionUseCase {
     refreshToken: (params: RefreshTokenParams) => DomainResult<AuthResponse>
     oauth2Init: (params: OAuth2Params) => DomainResult<OAuth2Response>
 }
-// endregion ==================================== AuthSessionUseCase ====================================

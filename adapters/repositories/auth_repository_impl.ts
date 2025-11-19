@@ -1,19 +1,27 @@
-// shared modules
-import { DomainResult, Option } from "@/core"
-import { AccountEntity } from "@/domain/entities"
-import { AccountRepository } from "@/domain/repositories"
+import { DomainResult } from "@/core"
+import { AuthRepository } from "@/domain/repositories"
+import {
+    AuthParams,
+    AuthResponse,
+    OAuth2Params,
+    OAuth2Response,
+    RefreshTokenParams,
+} from "@/domain/usecases"
 
-// internal modules
 import { ApiService } from "../apis"
 
-export class AccountRepositoryImpl implements AccountRepository {
+export class AuthRepositoryImpl implements AuthRepository {
     constructor(private apiService: ApiService) {}
 
-    async findCurrentAccount(): DomainResult<AccountEntity> {
+    refreshToken(params: RefreshTokenParams): DomainResult<AuthResponse> {
         throw new Error("Method not implemented.")
     }
 
-    async findAccountById(id: string): DomainResult<Option<AccountEntity>> {
+    authWithEmailPassword(params: AuthParams): DomainResult<AuthResponse> {
+        throw new Error("Method not implemented.")
+    }
+
+    oauth2Init(params: OAuth2Params): DomainResult<OAuth2Response> {
         throw new Error("Method not implemented.")
     }
 }

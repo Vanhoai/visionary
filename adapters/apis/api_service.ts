@@ -1,3 +1,5 @@
+import { Failure, FailureCodes } from "@/core"
+
 export interface ApiConfig {
     baseUrl: string
     timeout?: number
@@ -24,23 +26,43 @@ export class ApiService {
         }
     }
 
-    async get<T>(endpoint: string, headers?: Record<string, string>): Promise<T> {
+    async get<T>(
+        endpoint: string,
+        headers?: Record<string, string>,
+        params?: Record<string, string | number | boolean>,
+    ): Promise<T> {
+        if (params) endpoint += this.parseQueryParams(params)
         return this.call<T>("GET", endpoint, undefined, headers)
     }
 
-    async post<T>(endpoint: string, body?: unknown, headers?: Record<string, string>): Promise<T> {
+    async post<T>(
+        endpoint: string,
+        body?: unknown,
+        headers?: Record<string, string>,
+    ): Promise<T> {
         return this.call<T>("POST", endpoint, body, headers)
     }
 
-    async put<T>(endpoint: string, body?: unknown, headers?: Record<string, string>): Promise<T> {
+    async put<T>(
+        endpoint: string,
+        body?: unknown,
+        headers?: Record<string, string>,
+    ): Promise<T> {
         return this.call<T>("PUT", endpoint, body, headers)
     }
 
-    async delete<T>(endpoint: string, headers?: Record<string, string>): Promise<T> {
+    async delete<T>(
+        endpoint: string,
+        headers?: Record<string, string>,
+    ): Promise<T> {
         return this.call<T>("DELETE", endpoint, undefined, headers)
     }
 
-    async patch<T>(endpoint: string, body?: unknown, headers?: Record<string, string>): Promise<T> {
+    async patch<T>(
+        endpoint: string,
+        body?: unknown,
+        headers?: Record<string, string>,
+    ): Promise<T> {
         return this.call<T>("PATCH", endpoint, body, headers)
     }
 
@@ -70,22 +92,43 @@ export class ApiService {
 
             if (!response.ok) {
                 const errorData = await response.json().catch(() => ({}))
-                throw new Error(errorData.message || `HTTP Error ${response.status}`)
+                const message = errorData?.message
+                    ? errorData.message
+                    : "API request failed"
+
+                const code = errorData?.code
+                    ? errorData.code
+                    : response.status.toString()
+
+                throw new Failure(code, message)
             }
 
-            const payload = await response.json()
-            return payload as T
+            const httpResponse = (await response.json()) as HttpResponse<T>
+            return httpResponse.payload as T
         } catch (error) {
             clearTimeout(timeoutId)
 
-            if (error instanceof Error) {
-                if (error.name === "AbortError") {
-                    throw new Error("Request timeout")
-                }
+            // Ensure all errors are wrapped in Failure
+            if (error instanceof Failure) {
                 throw error
-            }
+            } else if (error instanceof Error) {
+                if (error.name === "AbortError") {
+                    throw new Failure(
+                        FailureCodes.TimeoutError,
+                        "Request timed out",
+                    )
+                }
 
-            throw new Error("Unknown error occurred")
+                throw new Failure(
+                    FailureCodes.NetworkError,
+                    error.message || "Network error occurred",
+                )
+            } else {
+                throw new Failure(
+                    FailureCodes.UnknownFailure,
+                    "An unknown error occurred",
+                )
+            }
         }
     }
 
@@ -95,6 +138,19 @@ export class ApiService {
 
     removeAuth() {
         delete this.defaultHeaders["Authorization"]
+    }
+
+    parseQueryParams(params: Record<string, string | number | boolean>) {
+        const queryString = Object.entries(params)
+            .map(
+                ([key, value]) =>
+                    `${encodeURIComponent(key)}=${encodeURIComponent(
+                        value.toString(),
+                    )}`,
+            )
+            .join("&")
+
+        return queryString ? `?${queryString}` : ""
     }
 }
 

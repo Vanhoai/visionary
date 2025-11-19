@@ -1,11 +1,3 @@
-import * as React from "react"
+import { AuthLayout } from "@/presentation/components/shared"
 
-interface LayoutProps {
-    children: React.ReactNode
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-    return <React.Fragment>{children}</React.Fragment>
-}
-
-export default Layout
+export default AuthLayout

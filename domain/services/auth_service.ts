@@ -1,7 +1,5 @@
-// shared modules
 import { DomainResult } from "@/core"
 
-// internal modules
 import {
     AuthParams,
     AuthResponse,
@@ -9,24 +7,21 @@ import {
     OAuth2Params,
     OAuth2Response,
     RefreshTokenParams,
-} from "../usecases/auth_usecases"
-import { AuthRepository } from "../repositories/auth_repository"
+} from "../usecases"
+import { AuthRepository } from "../repositories"
 
 export class AuthService implements AuthSessionUseCase {
     constructor(private authRepository: AuthRepository) {}
 
-    async authWithEmailPassword(params: AuthParams): DomainResult<AuthResponse> {
-        // Implement authentication logic here
-        throw new Error("Method not implemented.")
+    authWithEmailPassword(params: AuthParams): DomainResult<AuthResponse> {
+        return this.authRepository.authWithEmailPassword(params)
     }
 
-    async refreshToken(params: RefreshTokenParams): DomainResult<AuthResponse> {
-        // Implement token refresh logic here
-        throw new Error("Method not implemented.")
+    refreshToken(params: RefreshTokenParams): DomainResult<AuthResponse> {
+        return this.authRepository.refreshToken(params)
     }
 
-    async oauth2Init(params: OAuth2Params): DomainResult<OAuth2Response> {
-        // Implement OAuth2 initialization logic here
-        throw new Error("Method not implemented.")
+    oauth2Init(params: OAuth2Params): DomainResult<OAuth2Response> {
+        return this.authRepository.oauth2Init(params)
     }
 }
