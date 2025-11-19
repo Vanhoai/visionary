@@ -16,8 +16,10 @@ import {
     CardFooter,
     Spinner,
 } from "@/presentation/components/ui"
-import { accountService } from "@/presentation/di"
+import { accountService, authService } from "@/presentation/di"
 import { isFailure } from "@/core"
+import { useAuthStore } from "@/presentation/store"
+import { useRouter } from "next/navigation"
 
 const GoogleIcon = () => (
     <svg className="size-6" viewBox="0 0 24 24">
@@ -61,9 +63,12 @@ enum AuthMode {
 }
 
 const Auth: React.FC = () => {
+    const router = useRouter()
+    const { setAccessToken, setRefreshToken } = useAuthStore()
+
     const [mode, setMode] = React.useState<AuthMode>(AuthMode.BEGIN)
-    const [email, setEmail] = React.useState<string>("vanhoai.adv@gmail.com")
-    const [password, setPassword] = React.useState<string>("")
+    const [email, setEmail] = React.useState<string>("hinsun.studio@gmail.com")
+    const [password, setPassword] = React.useState<string>("vanhoai.adv123")
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
     const labelButton = React.useMemo(() => {
@@ -86,8 +91,49 @@ const Auth: React.FC = () => {
             return
         }
 
-        if (isExists) setMode(AuthMode.SIGN_IN)
-        else setMode(AuthMode.SIGN_UP)
+        if (isExists) {
+            setMode(AuthMode.SIGN_IN)
+            toast.success(
+                "Account found! Please enter your password to sign in.",
+            )
+        } else {
+            setMode(AuthMode.SIGN_UP)
+            toast.success(
+                "No account found! Please enter your password to create an account.",
+            )
+        }
+
+        setIsLoading(false)
+    }
+
+    const signIn = async () => {
+        setIsLoading(true)
+        const response = await authService.signIn({ email, password })
+        if (isFailure(response)) {
+            toast.error(response.message)
+            setIsLoading(false)
+            return
+        }
+
+        toast.success("Signed in successfully!")
+        setAccessToken(response.accessToken)
+        setRefreshToken(response.refreshToken)
+        setIsLoading(false)
+
+        router.push("/")
+    }
+
+    const signUp = async () => {
+        setIsLoading(true)
+        const response = await authService.signUp({ email, password })
+        if (isFailure(response)) {
+            toast.error(response.message)
+            setIsLoading(false)
+            return
+        }
+
+        console.log({ response })
+        toast.success("Signed up successfully!")
         setIsLoading(false)
     }
 
@@ -97,8 +143,10 @@ const Auth: React.FC = () => {
                 checkEmailExists()
                 break
             case AuthMode.SIGN_IN:
+                signIn()
                 break
             case AuthMode.SIGN_UP:
+                signUp()
                 break
         }
     }
@@ -153,6 +201,7 @@ const Auth: React.FC = () => {
                                         id="password"
                                         type="password"
                                         required
+                                        disabled={isLoading}
                                         placeholder="Enter your password"
                                         value={password}
                                         onChange={(e) =>

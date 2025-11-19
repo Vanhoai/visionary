@@ -1,6 +1,6 @@
 import { Failure } from "./models"
 
-export function AutoThrowFailure(
+export function auto_throw_failure(
     target: any,
     propertyKey: string,
     descriptor: PropertyDescriptor,

@@ -28,8 +28,8 @@ export class ApiService {
 
     async get<T>(
         endpoint: string,
-        headers?: Record<string, string>,
         params?: Record<string, string | number | boolean>,
+        headers?: Record<string, string>,
     ): Promise<T> {
         if (params) endpoint += this.parseQueryParams(params)
         return this.call<T>("GET", endpoint, undefined, headers)

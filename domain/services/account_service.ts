@@ -9,6 +9,7 @@ import {
 
 import { ManageAccountUseCase } from "../usecases"
 import { AccountRepository } from "../repositories"
+import { AccountEntity } from "../entities"
 
 export class AccountService implements ManageAccountUseCase {
     constructor(private accountRepository: AccountRepository) {}
@@ -28,6 +29,14 @@ export class AccountService implements ManageAccountUseCase {
 
         const response = await this.accountRepository.findAccountByEmail(email)
         if (isFailure(response)) return response
+
         return isSome(response)
+    }
+
+    async findAccountProfile(): DomainResult<AccountEntity> {
+        const response = await this.accountRepository.findProfile()
+        if (isFailure(response)) return response
+
+        return response
     }
 }

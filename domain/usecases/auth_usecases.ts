@@ -1,4 +1,5 @@
 import { DomainResult } from "@/core"
+import { AccountEntity } from "../entities"
 
 export interface AuthParams {
     email: string
@@ -24,7 +25,9 @@ export interface OAuth2Response {
 }
 
 export interface AuthSessionUseCase {
-    authWithEmailPassword: (params: AuthParams) => DomainResult<AuthResponse>
+    signIn: (params: AuthParams) => DomainResult<AuthResponse>
+    signUp: (params: AuthParams) => DomainResult<AccountEntity>
     refreshToken: (params: RefreshTokenParams) => DomainResult<AuthResponse>
+    signOut: () => DomainResult<boolean>
     oauth2Init: (params: OAuth2Params) => DomainResult<OAuth2Response>
 }
