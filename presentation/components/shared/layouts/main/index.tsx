@@ -24,7 +24,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     const router = useRouter()
     const { isAuthenticated } = useAuthStore()
     const { account, setAccount } = useAccountStore()
-    const { isGlobalLoading, message } = useLoadingStore()
+    const { isGlobalLoading } = useLoadingStore()
 
     const fetchAccount = async () => {
         const response = await accountService.findAccountProfile()
@@ -37,10 +37,10 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         setAccount(response)
     }
 
-    React.useEffect(() => {
-        if (!isAuthenticated) router.push("/auth")
-        else if (isAuthenticated && !account) fetchAccount()
-    }, [isAuthenticated, router, fetchAccount])
+    // React.useEffect(() => {
+    //     if (!isAuthenticated) router.push("/auth")
+    //     else if (isAuthenticated && !account) fetchAccount()
+    // }, [isAuthenticated, router, fetchAccount])
 
     return (
         <React.Fragment>

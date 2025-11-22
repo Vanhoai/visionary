@@ -161,8 +161,8 @@ const Auth: React.FC = () => {
                         {mode === AuthMode.SIGN_IN
                             ? "sign in to your account"
                             : mode === AuthMode.SIGN_UP
-                            ? "create an account"
-                            : "enter your email to get started"}
+                              ? "create an account"
+                              : "enter your email to get started"}
                         .
                     </CardDescription>
                 </CardHeader>

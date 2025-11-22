@@ -1,7 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { PyTorch, CPlusPlus, Kotlin, Python, RustDark, AppleDark, Android } from "developer-icons"
+import {
+    PyTorch,
+    CPlusPlus,
+    Kotlin,
+    Python,
+    RustDark,
+    Figma,
+    Android,
+} from "developer-icons"
 import Image from "next/image"
 import { OpenCvSvg } from "@/core"
 
@@ -28,9 +36,14 @@ const innerItems: ExperienceItem[] = [
 ]
 
 const outerItems: ExperienceItem[] = [
-    { icon: <Image src={OpenCvSvg} alt="OpenCV" width={90} height={90} />, angle: 20, size: 160, type: "TECH" },
+    {
+        icon: <Image src={OpenCvSvg} alt="OpenCV" width={90} height={90} />,
+        angle: 20,
+        size: 160,
+        type: "TECH",
+    },
     { icon: "#FF5E5E", angle: 70, size: 60, type: "NONE" },
-    { icon: <AppleDark size={80} />, angle: 120, size: 140, type: "TECH" },
+    { icon: <Figma size={80} />, angle: 120, size: 140, type: "TECH" },
     { icon: <Android size={80} />, angle: 200, size: 160, type: "TECH" },
     { icon: "#FFBC6F", angle: 240, size: 40, type: "NONE" },
     { icon: <PyTorch size={100} />, angle: 300, size: 160, type: "TECH" },
@@ -40,7 +53,9 @@ const outerItems: ExperienceItem[] = [
 const Experiences: React.FC = () => {
     const containerRef = React.useRef<HTMLDivElement>(null)
 
-    const [containerSize, setContainerSize] = React.useState<number | null>(null)
+    const [containerSize, setContainerSize] = React.useState<number | null>(
+        null,
+    )
     const [coreRadius, setCoreRadius] = React.useState<number>(0)
     const [innerRadius, setInnerRadius] = React.useState<number>(0)
     const [outerRadius, setOuterRadius] = React.useState<number>(0)
@@ -64,7 +79,9 @@ const Experiences: React.FC = () => {
 
     return (
         <div className="w-full min-h-screen py-12">
-            <h2 className="text-center text-3xl font-bold text-gray-300 mb-8">EXPERIENCE WITH</h2>
+            <h2 className="text-center text-3xl font-bold text-gray-300 mb-8">
+                EXPERIENCE WITH
+            </h2>
             <style jsx>{`
                 @keyframes rotateClockwise {
                     from {
@@ -157,8 +174,12 @@ const Experiences: React.FC = () => {
                                     key={`inner-${index}`}
                                     className="absolute experience-item"
                                     style={{
-                                        left: `calc(50% + ${pos.x - innerRadius / 2}px)`,
-                                        top: `calc(50% + ${pos.y - innerRadius / 2}px)`,
+                                        left: `calc(50% + ${
+                                            pos.x - innerRadius / 2
+                                        }px)`,
+                                        top: `calc(50% + ${
+                                            pos.y - innerRadius / 2
+                                        }px)`,
                                         transform: "translate(-50%, -50%)",
                                     }}
                                 >
@@ -167,7 +188,8 @@ const Experiences: React.FC = () => {
                                         style={{
                                             width: item.size,
                                             height: item.size,
-                                            backgroundColor: item.icon as string,
+                                            backgroundColor:
+                                                item.icon as string,
                                         }}
                                     >
                                         <div className="inner-item-content w-full h-full" />
@@ -181,8 +203,12 @@ const Experiences: React.FC = () => {
                                 key={`inner-${index}`}
                                 className="absolute experience-item"
                                 style={{
-                                    left: `calc(50% + ${pos.x - innerRadius / 2}px)`,
-                                    top: `calc(50% + ${pos.y - innerRadius / 2}px)`,
+                                    left: `calc(50% + ${
+                                        pos.x - innerRadius / 2
+                                    }px)`,
+                                    top: `calc(50% + ${
+                                        pos.y - innerRadius / 2
+                                    }px)`,
                                     transform: "translate(-50%, -50%)",
                                 }}
                             >
@@ -193,7 +219,9 @@ const Experiences: React.FC = () => {
                                         height: item.size,
                                     }}
                                 >
-                                    <div className="inner-item-content text-gray-800 text-2xl">{item.icon}</div>
+                                    <div className="inner-item-content text-gray-800 text-2xl">
+                                        {item.icon}
+                                    </div>
                                 </div>
                             </div>
                         )
@@ -219,8 +247,12 @@ const Experiences: React.FC = () => {
                                     key={`outer-${index}`}
                                     className="absolute experience-item"
                                     style={{
-                                        left: `calc(50% + ${pos.x - outerRadius / 2}px)`,
-                                        top: `calc(50% + ${pos.y - outerRadius / 2}px)`,
+                                        left: `calc(50% + ${
+                                            pos.x - outerRadius / 2
+                                        }px)`,
+                                        top: `calc(50% + ${
+                                            pos.y - outerRadius / 2
+                                        }px)`,
                                         transform: "translate(-50%, -50%)",
                                     }}
                                 >
@@ -229,7 +261,8 @@ const Experiences: React.FC = () => {
                                         style={{
                                             width: item.size,
                                             height: item.size,
-                                            backgroundColor: item.icon as string,
+                                            backgroundColor:
+                                                item.icon as string,
                                         }}
                                     >
                                         <div className="outer-item-content w-full h-full" />
@@ -243,8 +276,12 @@ const Experiences: React.FC = () => {
                                 key={`outer-${index}`}
                                 className="absolute experience-item"
                                 style={{
-                                    left: `calc(50% + ${pos.x - outerRadius / 2}px)`,
-                                    top: `calc(50% + ${pos.y - outerRadius / 2}px)`,
+                                    left: `calc(50% + ${
+                                        pos.x - outerRadius / 2
+                                    }px)`,
+                                    top: `calc(50% + ${
+                                        pos.y - outerRadius / 2
+                                    }px)`,
                                     transform: "translate(-50%, -50%)",
                                 }}
                             >
@@ -255,7 +292,9 @@ const Experiences: React.FC = () => {
                                         height: item.size,
                                     }}
                                 >
-                                    <div className="outer-item-content text-gray-800 text-2xl">{item.icon}</div>
+                                    <div className="outer-item-content text-gray-800 text-2xl">
+                                        {item.icon}
+                                    </div>
                                 </div>
                             </div>
                         )
